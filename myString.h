@@ -5,7 +5,8 @@ class myClass{
   public:
     myClass();
     int strlen(String text);
-    void tolower(String text, int len);
+    void tolower(String text);
+    void toupper(String text);
 };
 
 extern myClass obj;

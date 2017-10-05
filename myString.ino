@@ -1,19 +1,21 @@
 #include "Arduino.h"  
 #include "myString.h"
 
+const int serialSpeed = 9600;
 String text;
 int len;
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(9600);
+  Serial.begin(serialSpeed);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
   if(Serial.available() > 0){
     text = Serial.readString();
-    len = obj.strlen(text);
-    obj.tolower(text, len); 
+    //obj.tolower(text);
+    //obj.toupper(text); 
+    //Serial.println(obj.strlen(text));
   }
 }

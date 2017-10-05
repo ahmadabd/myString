@@ -12,11 +12,29 @@ int myClass::strlen(String text){
   return i;
 }
 
-void myClass::tolower(String text,int len){
+void myClass::tolower(String text){
   int i;
+  int len = 0;
+  while(text[len] != '\0'){
+    len += 1;
+  }
   for(i = 0;i < len;i++){
     if(text[i] <= 'Z' && text[i] >= 'A'){
       text[i] = text[i] + ('a' - 'A');
+    }
+  }
+  Serial.println(text);  
+}
+
+void myClass::toupper(String text){
+  int i;
+  int len = 0;
+  while(text[len] != '\0'){
+    len += 1;
+  }
+  for(i = 0;i < len;i++){
+    if(text[i] <= 'z' && text[i] >= 'a'){
+      text[i] = text[i] - ('a' - 'A');
     }
   }
   Serial.println(text);  
