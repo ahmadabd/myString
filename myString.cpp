@@ -12,7 +12,7 @@ int myClass::strlen(String text){
   return i;
 }
 
-void myClass::tolower(String text){
+String myClass::tolower(String text){
   int i;
   int len = 0;
   while(text[len] != '\0'){
@@ -23,10 +23,10 @@ void myClass::tolower(String text){
       text[i] = text[i] + ('a' - 'A');
     }
   }
-  Serial.println(text);  
+  return text;  
 }
 
-void myClass::toupper(String text){
+String myClass::toupper(String text){
   int i;
   int len = 0;
   while(text[len] != '\0'){
@@ -37,7 +37,7 @@ void myClass::toupper(String text){
       text[i] = text[i] - ('a' - 'A');
     }
   }
-  Serial.println(text);  
+  return text;  
 }
 
 myClass obj = myClass();

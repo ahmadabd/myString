@@ -14,8 +14,8 @@ void loop() {
   // put your main code here, to run repeatedly:
   if(Serial.available() > 0){
     text = Serial.readString();
-    //obj.tolower(text);
-    //obj.toupper(text); 
+    //Serial.println(obj.tolower(text));
+    //Serial.println(obj.toupper(text)); 
     //Serial.println(obj.strlen(text));
   }
 }
